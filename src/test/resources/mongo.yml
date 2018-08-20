@@ -1,0 +1,9 @@
+mongo:
+  connections:
+    localMongo1:
+      type: 'uri'
+      uri: mongodb://localhost:27017
+    localMongo2:
+      type: 'server'
+      host: localhost
+      port: 27017

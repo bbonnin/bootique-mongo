@@ -1,0 +1,3 @@
+io.millesabords.bootique.mongo.ConnectionConfig
+io.millesabords.bootique.mongo.ServerConnectionConfig
+io.millesabords.bootique.mongo.UriConnectionConfig
