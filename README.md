@@ -2,6 +2,8 @@
 # Bootique MongoDB client
 Provides MongoDB integration with [Bootique](http://bootique.io)
 
+> Example [here](https://github.com/bbonnin/bootique-mongo-example)
+
 ## Configuration
 
 2 ways:
