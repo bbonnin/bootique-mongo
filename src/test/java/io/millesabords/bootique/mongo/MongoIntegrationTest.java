@@ -31,7 +31,7 @@ public class MongoIntegrationTest {
             .withExposedPorts(27017);
 
     @Test
-    public void test() throws IOException, TimeoutException {
+    public void test() {
         LOGGER.info("MongoDB: {}", mongo.getContainerIpAddress() + ":" + mongo.getMappedPort(27017));
 
         BQRuntime runtime = Bootique
@@ -43,7 +43,7 @@ public class MongoIntegrationTest {
                 .autoLoadModules()
                 .createRuntime();
 
-        runtime.getInstance(Tester.class).test();
+        runtime.getInstance(Tester.class).run();
     }
 }
 
@@ -57,7 +57,7 @@ class Tester {
         this.clientFactory = clientFactory;
     }
 
-    public void test() {
+    public void run() {
         MongoCollection testColl1 = getCollection("localMongo1", "testdb", "test");
         testColl1.insertOne(new Document("hello", "world"));
 
